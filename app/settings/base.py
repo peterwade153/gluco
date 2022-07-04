@@ -40,7 +40,6 @@ INSTALLED_APPS = [
 
     # Third party libs
     'rest_framework',
-    'drf_yasg',
 
     # project apps
     'api',
