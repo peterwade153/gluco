@@ -1,4 +1,4 @@
-from rest_framework.mixins import ListModelMixin, RetrieveModelMixin
+from rest_framework.mixins import ListModelMixin, RetrieveModelMixin, CreateModelMixin
 from rest_framework.viewsets import GenericViewSet
 from rest_framework.filters import OrderingFilter
 
@@ -8,7 +8,7 @@ from api.page import GlucosePageNumberPagination
 from api.serializers import GlucoseLevelSerilizer
 
 
-class GlucoseLevelView(GenericViewSet, ListModelMixin, RetrieveModelMixin):
+class GlucoseLevelView(GenericViewSet, ListModelMixin, RetrieveModelMixin, CreateModelMixin):
     queryset = GlucoseLevel.objects.all()
     serializer_class = GlucoseLevelSerilizer
     pagination_class = GlucosePageNumberPagination
