@@ -31,3 +31,8 @@ Requires Postgres and built with Python 3.8
    ```
 
 7.  The application can be accessed via swagger docs here http://127.0.0.1:8000/
+
+6. Populate Database with sample data
+   ```
+   python manage.py populate
+   ```
