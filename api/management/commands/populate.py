@@ -9,7 +9,7 @@ class Command(BaseCommand):
     help = "populate user glucose values"
 
     def handle(self, *args, **options):
-        path = '../gluco/sample-data.zip'
+        path = './sample-data.zip'
         df = self.extract_zip_files(path)
         self.save_data(df)
 
