@@ -22,7 +22,7 @@ class GlucoseAPITestCase(BaseAPITestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
     def test_list_levels_by_page(self):
-        response = self.client.get('/api/v1/levels/?page=5', format='json')
+        response = self.client.get('/api/v1/levels/?page=1', format='json')
         self.assertEqual(response.status_code, status.HTTP_200_OK)
 
     def test_list_levels_by_stop_and_start(self):
